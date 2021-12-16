@@ -11,7 +11,7 @@ public class RfidModule extends ReactContextBaseJavaModule {
     }
     @Override
     public String getName() {
-        return "CalendarModule";
+        return "RfidModule";
     }
 
     @ReactMethod(isBlockingSynchronousMethod = true)
