@@ -12,22 +12,14 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
-public class RfidModule extends ReactContextBaseJavaModule {
-    RfidModule(ReactApplicationContext context) {
+public class EventEmitModule extends ReactContextBaseJavaModule {
+    EventEmitModule(ReactApplicationContext context) {
         super(context);
     }
+
     @Override
     public String getName() {
-        return "RfidModule";
-    }
-
-    @ReactMethod(isBlockingSynchronousMethod = true)
-    public void setName(String params) {
-        Log.d("aaa", "aaaaa");
-        Log.d("params", params);
-        WritableMap res = Arguments.createMap();
-        res.putString("eventProperty", "someValue");
-        sendEvent(getReactApplicationContext(), "EventReminder", res);
+        return "EventEmitModule";
     }
 
     private void sendEvent(ReactContext reactContext,
@@ -39,11 +31,16 @@ public class RfidModule extends ReactContextBaseJavaModule {
     }
     @ReactMethod
     public void addListener(String eventName) {
+        Log.d("eventName", eventName);
         // Set up any upstream listeners or background tasks as necessary
     }
 
     @ReactMethod
     public void removeListeners(Integer count) {
+        Log.d("Countaaaaaaa", count.toString());
         // Remove upstream listeners, stop unnecessary background tasks
     }
+//    WritableMap params = Arguments.createMap();
+//    params.putString("eventProperty", "someValue");
+//    sendEvent(reactContext, "EventReminder", params);
 }
