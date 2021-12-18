@@ -26,8 +26,8 @@ public class RfidModule extends ReactContextBaseJavaModule {
         Log.d("aaa", "aaaaa");
         Log.d("params", params);
         WritableMap res = Arguments.createMap();
-        res.putString("eventProperty", "someValue");
-        sendEvent(getReactApplicationContext(), "EventReminder", res);
+        res.putString("eventProperty", "hogee");
+        sendEvent(getReactApplicationContext(), "discoveredDevice", res);
     }
 
     private void sendEvent(ReactContext reactContext,
