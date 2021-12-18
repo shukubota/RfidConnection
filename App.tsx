@@ -33,8 +33,8 @@ const Section: React.FC = () => {
   }, []);
 
   React.useEffect(() => {
-    const eventEmitter = new NativeEventEmitter(NativeModules.ToastExample);
-    setEventListner(eventEmitter.addListener('EventReminder', (event) => {
+    const eventEmitter = new NativeEventEmitter(NativeModules.RfidModule);
+    setEventListner(eventEmitter.addListener('discoveredDevice', (event) => {
       console.log(event.eventProperty) // "someValue"
     }));
   }, []);
