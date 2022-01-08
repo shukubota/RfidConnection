@@ -15,28 +15,17 @@ import {
   Text,
   TouchableOpacity,
   View,
-  NativeModules,
-  NativeEventEmitter,
-  EmitterSubscription,
 } from 'react-native';
-// const {RfidModule} = NativeModules;
 import RfidModule from './RfidModule';
 
 const Section: React.FC = () => {
-  const [eventListner, setEventListner] = React.useState<EmitterSubscription | null>(null);
   const onPress = useCallback(() => {
-    console.log('onclicka');
-    console.log({ NativeModules });
-    console.log({ RfidModule });
-    const a = RfidModule.setName('params');
-    console.log({a});
+    console.log('onPress');
+    RfidModule.login('parsams', 'locationparams');
   }, []);
 
   React.useEffect(() => {
-    const eventEmitter = new NativeEventEmitter(NativeModules.RfidModule);
-    setEventListner(eventEmitter.addListener('discoveredDevice', (event) => {
-      console.log(event.eventProperty) // "someValue"
-    }));
+    console.log('useeffect')
   }, []);
 
   return (
