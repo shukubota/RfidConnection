@@ -25,7 +25,7 @@ const Section: React.FC = () => {
   }, []);
 
   React.useEffect(() => {
-    console.log('useeffect')
+    console.log('useeffect');
   }, []);
 
   return (
