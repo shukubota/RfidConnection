@@ -9,6 +9,7 @@
  */
 
 import React, {useCallback} from 'react';
+import {appleAuth, AppleButton} from '@invertase/react-native-apple-authentication';
 import {
   SafeAreaView,
   StyleSheet,
@@ -28,11 +29,32 @@ const Section: React.FC = () => {
     console.log('useeffect');
   }, []);
 
+  const onPressAppleLoginButton = useCallback(async () => {
+    console.log('applelogin');
+    const appleAuthRes = await appleAuth.performRequest({
+      requestedOperation: appleAuth.Operation.LOGIN,
+      requestedScopes: [appleAuth.Scope.EMAIL, appleAuth.Scope.FULL_NAME],
+    });
+    console.log({appleAuthRes});
+    // const credentialState = await appleAuth.getCredentialStateForUser(appleAuthRes.user);
+  }, []);
+
   return (
     <View>
       <TouchableOpacity onPress={onPress} style={styles.eventButton}>
         <Text style={styles.buttonText}>NativeModule呼び出し</Text>
       </TouchableOpacity>
+      <View>
+        <AppleButton
+          buttonStyle={AppleButton.Style.WHITE}
+          buttonType={AppleButton.Type.SIGN_IN}
+          style={{
+            width: 160, // You must specify a width
+            height: 45, // You must specify a height
+          }}
+          onPress={onPressAppleLoginButton}
+        />
+      </View>
     </View>
   );
 };
