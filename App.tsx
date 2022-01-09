@@ -31,7 +31,7 @@ const Section: React.FC = () => {
   return (
     <View>
       <TouchableOpacity onPress={onPress} style={styles.eventButton}>
-        <Text>ボタン</Text>
+        <Text style={styles.buttonText}>NativeModule呼び出し</Text>
       </TouchableOpacity>
     </View>
   );
@@ -47,11 +47,14 @@ const App = () => {
 
 const styles = StyleSheet.create({
   eventButton: {
-    backgroundColor: 'green',
     width: '80%',
     alignContent: 'center',
     margin: 'auto',
     height: 30,
+    fontSize: '50px',
+  },
+  buttonText: {
+    fontSize: 20,
   },
 });
 
