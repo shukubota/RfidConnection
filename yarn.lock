@@ -1181,6 +1181,11 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz#e42b1bef12d2415411519fd528e64b593b1363dc"
   integrity sha512-W/J0fNYVO01tioHjvYWQ9m6RgndVtbElzYozBq1ZPrHO/iCzlqoySHl4gO/fpCl9QEFjvJfjPgtPMTMlsoq5DQ==
 
+"@react-native-karte/core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-karte/core/-/core-1.0.0.tgz#34de728aa097a63fc84adef8dca3e125c8a50dfa"
+  integrity sha512-nRhQklPMXWIxabcIE98ertOL86ukpuDHme1B1HVj3AKp06iRuCn7inp3HEgt5B0gcMTnnvMInZpDSC0ek34Tgg==
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-native/assets/-/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"
