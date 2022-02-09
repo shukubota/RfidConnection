@@ -72,6 +72,11 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
+  - KarteCore (2.19.0):
+    - KarteUtilities (~> 3.3)
+  - KarteUtilities (3.6.0):
+    - KarteUtilities/standard (= 3.6.0)
+  - KarteUtilities/standard (3.6.0)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.180)
   - RCT-Folly (2021.06.28.00-v2):
@@ -339,6 +344,9 @@ PODS:
     - React-perflogger (= 0.66.3)
   - RNAppleAuthentication (2.1.2):
     - React-Core
+  - RNKRTCore (1.0.0):
+    - KarteCore
+    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -397,6 +405,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNAppleAuthentication (from `../node_modules/@invertase/react-native-apple-authentication`)"
+  - "RNKRTCore (from `../node_modules/@react-native-karte/core`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -412,6 +421,8 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - fmt
+    - KarteCore
+    - KarteUtilities
     - libevent
     - OpenSSL-Universal
     - YogaKit
@@ -477,6 +488,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNAppleAuthentication:
     :path: "../node_modules/@invertase/react-native-apple-authentication"
+  RNKRTCore:
+    :path: "../node_modules/@react-native-karte/core"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -497,6 +510,8 @@ SPEC CHECKSUMS:
   FlipperKit: d8d346844eca5d9120c17d441a2f38596e8ed2b9
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 5337263514dd6f09803962437687240c5dc39aa4
+  KarteCore: 7ffae4b230ac3228ad02ac6b2fe358d52767d988
+  KarteUtilities: 6854c0019ffa3d318dd5d545cded9f9e7979b70e
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
   RCT-Folly: a21c126816d8025b547704b777a2ba552f3d9fa9
@@ -524,6 +539,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: bbbdb3d8fcf327c6e2249ee71b6ef1764b7dc266
   ReactCommon: 9bac022ab71596f2b0fde1268272543184c63971
   RNAppleAuthentication: e95bcfbd044013667f35c5ca20ae17d39500c009
+  RNKRTCore: c7a30297a0099fce825b46819f8bfeb2d6a5126d
   Yoga: 32a18c0e845e185f4a2a66ec76e1fd1f958f22fa
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
