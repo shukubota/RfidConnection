@@ -9,6 +9,7 @@
  */
 
 import React, {useCallback} from 'react';
+import {Tracker} from '@react-native-karte/core';
 import {appleAuth, AppleButton} from '@invertase/react-native-apple-authentication';
 import {
   SafeAreaView,
@@ -23,6 +24,15 @@ const Section: React.FC = () => {
   const onPress = useCallback(() => {
     console.log('onPress');
     RfidModule.login('parsams', 'locationparams');
+  }, []);
+
+  const onPressKarte = useCallback(() => {
+    console.log('onPressKarte');
+    Tracker.track('favorite', {
+      id: 'P00003',
+      name: 'ミネラルウォーター（500ml）',
+      price: 100,
+    });
   }, []);
 
   React.useEffect(() => {
@@ -43,6 +53,9 @@ const Section: React.FC = () => {
     <View>
       <TouchableOpacity onPress={onPress} style={styles.eventButton}>
         <Text style={styles.buttonText}>NativeModule呼び出し</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onPressKarte} style={styles.eventButton}>
+        <Text style={styles.buttonText}>karte</Text>
       </TouchableOpacity>
       <View>
         <AppleButton
